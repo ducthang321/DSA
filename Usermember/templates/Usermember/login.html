@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   {% load static %}
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>login</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="{% static 'Usermember/style.css'%}">
+
+</head>
+<body> 
+
+
+      <!-- <div class="message">
+         <span>'.$message.'</span>
+         <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+      </div> -->
+
+   
+<section class="form-container">
+
+   <form action="" method="post">
+      <h3>login now</h3>
+      {% csrf_token %}
+      <input type="name" name="username" class="box" placeholder="enter your user" required>
+      <input type="password" name="password" class="box" placeholder="enter your password" required>
+      <input type="submit" value="login now" class="btn" name="submit" onclick=" alert('Alert For your User!') ? 2 : location.reload(); ">
+      <p>don't have an account? <a href="register.html">register now</a></p>
+   </form>
+</section>
+
+
+</body>
+</html>
